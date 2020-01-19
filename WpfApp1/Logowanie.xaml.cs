@@ -49,10 +49,14 @@ namespace WpfApp1
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
             if (dtbl.Rows.Count == 1)
-            {
-                FillYourDetails win = new FillYourDetails();
-                win.Show();
-                this.Close();
+                {
+                    string query1 = "INSERT INTO dbo.ActiveUser(ID) SELECT UserID from dbo.tblUser WHERE Login = '" + txtLogin.Text + "'";
+                    SqlDataAdapter sd = new SqlDataAdapter(query1, sqlCon);
+                    DataTable dtbl1 = new DataTable();
+                    sd.Fill(dtbl1);
+                    FillYourDetails win = new FillYourDetails();
+                    win.Show();
+                    this.Close();
 
             }
             else
