@@ -5,27 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="FillYourDetails" Height="800" Width="1200">
+        Title="FillYourDetails" Height="800" Width="1200" Closing="Window_Closing"  >
     <Border Padding="15">
         <Grid>
             <TextBlock FontSize="50" HorizontalAlignment="Center" Margin="471,0,460,0" ><Run Text="Your Panel"/></TextBlock>
             <TextBlock Text="Nickname:" FontSize="40" Margin="24,134,942,538"></TextBlock>
-            <TextBox Name="Nickname" Margin="225,134,651,555" TextChanged="Nickname_TextChanged" FontSize="30" ></TextBox>
+            <TextBox Name="Nickname" Margin="225,134,651,555" FontSize="30" Loaded="Nickname_Loaded" />
             <TextBlock Text="Server:" FontSize="40" Margin="88,206,942,470"></TextBlock>
             <TextBlock Text="Division:" FontSize="40" Margin="63,274,942,402"></TextBlock>
             <TextBlock Text="Role:" FontSize="40" Margin="126,342,942,330"></TextBlock>
             <TextBlock Text="Discord id:" FontSize="40" Margin="24,414,942,256"></TextBlock>
-            <TextBox Name="Contact" FontSize="30" Margin="225,418,651,271" TextChanged="Contact_TextChanged"></TextBox>
+            <TextBox Name="Contact" FontSize="30" Margin="225,418,651,271" TextChanged="Contact_TextChanged" Loaded="Contact_Loaded"></TextBox>
             <TextBlock Text="Top character:" FontSize="40" Margin="726,117,162,555"></TextBlock>
-            <ComboBox Name="Char1" FontSize="30" Margin="726,189,150,500" TextInput="Char1_TextInput" IsTextSearchEnabled="True" SelectionChanged="Char1_SelectionChanged_1" />
+            <ComboBox Name="Char1" FontSize="30" Margin="726,189,150,500" TextInput="Char1_TextInput" IsTextSearchEnabled="True" SelectionChanged="Char1_SelectionChanged_1" Loaded="Char1_Loaded" />
 
             <Button x:Name="ConfirmButton" Content="Confirm" FontSize="50" Margin="141,600,651,45" Click="Button_Click"></Button>
-            <ComboBox x:Name="Server" HorizontalAlignment="Left" Margin="225,206,0,0" VerticalAlignment="Top" Width="286" Height="50" FontSize="30" ItemsSource="{Binding dr,Mode=OneWay}" TextInput="Server_TextInput" />
-            <ComboBox x:Name="Division" HorizontalAlignment="Left" VerticalAlignment="Top" Width="286" Margin="225,274,0,0" Height="50" FontSize="30" TextInput="Division_TextInput_1" />
-            <ComboBox x:Name="Role" HorizontalAlignment="Left" VerticalAlignment="Top" Width="286" Margin="225,346,0,0" Height="50" FontSize="30" TextInput="Role_TextInput_1" />
+            <ComboBox x:Name="Server" HorizontalAlignment="Left" Margin="225,206,0,0" VerticalAlignment="Top" Width="286" Height="50" FontSize="30" ItemsSource="{Binding dr,Mode=OneWay}" TextInput="Server_TextInput" Loaded="Server_Loaded" />
+            <ComboBox x:Name="Division" HorizontalAlignment="Left" VerticalAlignment="Top" Width="286" Margin="225,274,0,0" Height="50" FontSize="30" TextInput="Division_TextInput_1" Loaded="Division_Loaded" />
+            <ComboBox x:Name="Role" HorizontalAlignment="Left" VerticalAlignment="Top" Width="286" Margin="225,346,0,0" Height="50" FontSize="30" TextInput="Role_TextInput_1" Loaded="Role_Loaded" />
             <Button x:Name="FindButton" Content="Find a teammate!" Margin="701,600,91,45" Click="Button_Click_1" FontSize="45"  ></Button>
             <TextBlock Margin="74,483,942,189" Text="Gender:" FontSize="40" ></TextBlock>
-            <ComboBox x:Name="Gender" HorizontalAlignment="Left" VerticalAlignment="Top" Width="286" Margin="225,483,0,0" Height="50" TextInput="Gender_TextInput" FontSize="30" />
+            <ComboBox x:Name="Gender" HorizontalAlignment="Left" VerticalAlignment="Top" Width="286" Margin="225,483,0,0" Height="50" TextInput="Gender_TextInput" FontSize="30" Loaded="Gender_Loaded" />
+            
 
         </Grid>
     </Border>

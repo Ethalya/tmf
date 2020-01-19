@@ -23,7 +23,7 @@ namespace WpfApp1
     public partial class FillYourDetails : Window
     {
        
-        SqlConnection sqlCon = new SqlConnection(@"Data Source = DESKTOP-NQU0NJF\SQLSERVER; Initial Catalog = TeammateFinder; Integrated Security=True;");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;");
 
         public FillYourDetails()
         {
@@ -35,12 +35,12 @@ namespace WpfApp1
             FillComboFromCharacters();
             FillComboFromCharacters();
             FillComboFromGender();
-            FillComboFromActive();
+            
             
         }
         void FillComboFromServers()
         {
-            Server.Items.Clear();
+            
             sqlCon.Open();
             SqlCommand cmd = sqlCon.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -93,7 +93,7 @@ namespace WpfApp1
 
         void FillComboFromCharacters()
         {
-            Char1.Items.Clear();
+            
             sqlCon.Open();
             SqlCommand cmd = sqlCon.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -127,26 +127,12 @@ namespace WpfApp1
             sqlCon.Close();
         }
 
-        void FillComboFromActive()
-        {
-            sqlCon.Open();
-            SqlCommand cmd = sqlCon.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT ID FROM ActiveUser";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            sqlCon.Close();
-        }
+  
 
 
 
 
-        private void Nickname_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+       
 
         private void Contact_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -155,19 +141,15 @@ namespace WpfApp1
 
         private void Char1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             FillComboFromCharacters();
-          
-        }
-
-        private void Char2_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+            
 
         }
 
-        private void Char3_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+      
 
-        }
+       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -182,7 +164,7 @@ namespace WpfApp1
         }
         private void Char1_TextInput(object sender, TextCompositionEventArgs e)
         {
-
+           
         }
 
         private void Char1_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
@@ -193,6 +175,7 @@ namespace WpfApp1
         private void Server_TextInput(object sender, TextCompositionEventArgs e)
         {
             FillComboFromServers();
+            
         }
 
    
@@ -219,7 +202,7 @@ namespace WpfApp1
             FillComboFromGender();
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void Window_Closing(object sender, CancelEventArgs e)
         {
             sqlCon.Open();
             SqlCommand cmd = new SqlCommand();
@@ -227,6 +210,156 @@ namespace WpfApp1
             cmd.CommandText = "DELETE FROM dbo.ActiveUser";
             cmd.ExecuteNonQuery();
             sqlCon.Close();
+
+        }
+
+       
+
+        private void Nickname_Loaded(object sender, RoutedEventArgs e)
+        {
+            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT Nickname FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        Nickname.Text = sdr["Nickname"].ToString();
+
+                    }
+                    con.Close();
+                }
+            }
+        }
+
+        private void Server_Loaded(object sender, RoutedEventArgs e)
+        {
+            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT Server FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        Server.Text = sdr["Server"].ToString();
+
+                    }
+                    con.Close();
+                }
+            }
+        }
+
+        private void Division_Loaded(object sender, RoutedEventArgs e)
+        {
+            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT Division FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        Division.Text = sdr["Division"].ToString();
+
+                    }
+                    con.Close();
+                }
+            }
+        }
+
+        private void Role_Loaded(object sender, RoutedEventArgs e)
+        {
+            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT Role FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        Role.Text = sdr["Role"].ToString();
+
+                    }
+                    con.Close();
+                }
+            }
+        }
+
+        private void Contact_Loaded(object sender, RoutedEventArgs e)
+        {
+            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT Discord_id FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        Contact.Text = sdr["Discord_id"].ToString();
+
+                    }
+                    con.Close();
+                }
+            }
+        }
+
+        private void Gender_Loaded(object sender, RoutedEventArgs e)
+        {
+            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT Gender FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        Gender.Text = sdr["Gender"].ToString();
+
+                    }
+                    con.Close();
+                }
+            }
+        }
+
+        private void Char1_Loaded(object sender, RoutedEventArgs e)
+        {
+            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT Top_Character FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        Char1.Text = sdr["Top_Character"].ToString();
+
+                    }
+                    con.Close();
+                }
+            }
         }
     }
 }
