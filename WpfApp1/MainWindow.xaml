@@ -5,18 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200">
+        Title="MainWindow" Height="800" Width="1200" >
     <Border Padding="15">
-       
-            <Grid Margin="0,-5,0,5">
-            <TextBlock Text="Are you looking for a Teammate?" FontSize="40" TextAlignment="Center" Margin="0,258,0,415"></TextBlock>
-            <TextBlock Text="Sign up now!" FontSize="60" TextAlignment="Center" Margin="10,329,-10,320"></TextBlock>
-            <Button Margin="372,445,372,188" Click="Button_Click_2" Content="Sign up" FontSize="40"></Button>
-            <Button Margin="372,590,372,43" Content="Login" FontSize="40" Click="Button_Click_3"></Button>
 
-
-
-
+        <Grid Margin="-15">
+            <Grid.Background>
+                <ImageBrush ImageSource="Soraka.jpg"/>
+            </Grid.Background>
+            <TextBlock Text="Are you looking for a Teammate?" FontSize="40" TextAlignment="Center" Margin="10,275,551,423" Foreground="White" FontFamily="Tw Cen MT">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect></TextBlock>
+            <TextBlock FontSize="60" TextAlignment="Center" Margin="10,329,551,329" Foreground="White" FontFamily="Tw Cen MT">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect><Run Text="Sign "/><Run Text="up"/><Run Text=" "/><Run Text="now!"/></TextBlock>
+            <Button Margin="155,562,711,105" Click="Button_Click_2" Content="Sign up" FontSize="40" Foreground="White" BorderBrush="{x:Null}" FontFamily="Tw Cen MT">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.5" Direction="313"/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="button1.png"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="155,445,711,223" Content="Login" FontSize="40" Click="Button_Click_3" Foreground="White" BorderBrush="{x:Null}" FontFamily="Tw Cen MT">
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.5"/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="button1.png"/>
+                </Button.Background>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="258" Margin="105,36,0,0" VerticalAlignment="Top" Width="559" Source="TMF Logo2.png"/>
         </Grid>
     </Border>
 </Window>
