@@ -13,14 +13,32 @@
             <Grid.Background>
                 <ImageBrush ImageSource="zoe.jpeg"/>
             </Grid.Background>
-            <TextBlock Text="Nickname:" FontSize="40" Margin="100,148,913,575" FontFamily="Tw Cen MT" Foreground="White"></TextBlock>
+            <TextBlock Text="Nickname:" FontSize="40" Margin="100,148,913,575" FontFamily="Tw Cen MT" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect></TextBlock>
             <TextBox Name="Nickname" Margin="293,137,637,575" FontSize="40" Loaded="Nickname_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-            <TextBlock Text="Server:" FontSize="40" Margin="151,215,920,506" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.427,0.4"></TextBlock>
-            <TextBlock Text="Division:" FontSize="40" Margin="132,283,920,438" FontFamily="Tw Cen MT" Foreground="White"></TextBlock>
-            <TextBlock Text="Role:" FontSize="40" Margin="190,346,920,371" FontFamily="Tw Cen MT" Foreground="White"></TextBlock>
-            <TextBlock Text="Discord id:" FontSize="40" Margin="100,416,920,307" FontFamily="Tw Cen MT" Foreground="White"></TextBlock>
+            <TextBlock Text="Server:" FontSize="40" Margin="151,215,920,506" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.427,0.4">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect></TextBlock>
+            <TextBlock Text="Division:" FontSize="40" Margin="132,283,920,438" FontFamily="Tw Cen MT" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect></TextBlock>
+            <TextBlock Text="Role:" FontSize="40" Margin="190,346,920,371" FontFamily="Tw Cen MT" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect></TextBlock>
+            <TextBlock Text="Discord id:" FontSize="40" Margin="100,416,920,307" FontFamily="Tw Cen MT" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect></TextBlock>
             <TextBox Name="Contact" FontSize="40" Margin="293,405,637,307" TextChanged="Contact_TextChanged" Loaded="Contact_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" ClipToBounds="True" Width="264" Height="59" VerticalAlignment="Stretch"></TextBox>
-            <TextBlock FontSize="40" Margin="24,544,920,179" FontFamily="Tw Cen MT" Foreground="White"><Run Text="Main"/><Run Text=" character:"/></TextBlock>
+            <TextBlock FontSize="40" Margin="24,544,920,179" FontFamily="Tw Cen MT" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect><Run Text="Main"/><Run Text=" character:"/></TextBlock>
             <ComboBox Name="Char1" FontSize="40" Margin="293,533,637,179" TextInput="Char1_TextInput" IsTextSearchEnabled="True" SelectionChanged="Char1_SelectionChanged_1" Loaded="Char1_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center"/>
 
             <Button x:Name="ConfirmButton" Content="Save" FontSize="40" Margin="293,630,650,65" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White">
@@ -81,6 +99,9 @@
                 </Button.Style>
             </Button>
             <TextBlock Margin="130,480,925,241" Text="Gender:" FontSize="40" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.5,0.5" >
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -90,8 +111,16 @@
                     </TransformGroup>
                 </TextBlock.RenderTransform></TextBlock>
             <ComboBox x:Name="Gender" Margin="293,469,637,243" TextInput="Gender_TextInput" FontSize="40" Loaded="Gender_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center" />
-            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="393" Margin="151,10,0,0" Source="Panel.png"/>
-            <Image HorizontalAlignment="Left" Height="208" Margin="888,10,0,0" VerticalAlignment="Top" Width="296" Source="TMF Logo4.png"/>
+            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="393" Margin="151,10,0,0" Source="Panel.png">
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="208" Margin="888,10,0,0" VerticalAlignment="Top" Width="296" Source="TMF Logo4.png">
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
 
 
         </Grid>

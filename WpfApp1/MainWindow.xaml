@@ -81,7 +81,8 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Image HorizontalAlignment="Left" Height="258" Margin="73,36,0,0" VerticalAlignment="Top" Width="559" Source="TMF Logo2.png" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="258" Margin="73,36,0,0" VerticalAlignment="Top" Width="559" Source="TMF Logo2.png" Grid.Column="1">
+            </Image>
         </Grid>
     </Border>
 </Window>

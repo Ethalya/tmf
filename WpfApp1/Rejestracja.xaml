@@ -73,7 +73,11 @@
                     <ImageBrush ImageSource="register.png"/>
                 </Image.OpacityMask>
             </Image>
-            <Image HorizontalAlignment="Left" Height="196" Margin="832,0,0,-125" VerticalAlignment="Top" Width="342" Source="TMF Logo4.png"/>
+            <Image HorizontalAlignment="Left" Height="196" Margin="832,0,0,-125" VerticalAlignment="Top" Width="342" Source="TMF Logo4.png">
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
             <Button Content="Login" HorizontalAlignment="Left" Height="100" Margin="965,645,0,-674" VerticalAlignment="Top" Width="209" FontSize="40" FontFamily="Tw Cen MT" Foreground="White" Click="Button_Click_1">
                 <Button.Effect>
                     <DropShadowEffect/>

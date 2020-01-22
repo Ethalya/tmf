@@ -78,6 +78,9 @@
                 </Button.Style>
             </Button>
             <Image HorizontalAlignment="Left" Height="201" Margin="838,10,0,0" VerticalAlignment="Top" Width="346" Source="TMF Logo3.png" Stretch="Fill">
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
                 <Image.OpacityMask>
                     <ImageBrush ImageSource="TMF Logo3.png"/>
                 </Image.OpacityMask>
