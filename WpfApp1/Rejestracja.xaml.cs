@@ -20,7 +20,7 @@ namespace WpfApp1
     /// </summary>
     public partial class Rejestracja : Window
     {
-        string connectionString = @"Data Source = DESKTOP-NQU0NJF\SQLSERVER; Initial Catalog = TeammateFinder; Integrated Security=True;";
+        string connectionString = @"Data Source = .SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
         public Rejestracja()
         {
             InitializeComponent();

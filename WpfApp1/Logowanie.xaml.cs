@@ -42,23 +42,24 @@ namespace WpfApp1
         public void Button_Click_1(object sender, RoutedEventArgs e)
         {
             
-            SqlConnection sqlCon = new SqlConnection(@"Data Source = DESKTOP-NQU0NJF\SQLSERVER; Initial Catalog = TeammateFinder; Integrated Security=True;");
+            SqlConnection sqlCon = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;");
             sqlCon.Open();
             string query = "SELECT *FROM tblUser WHERE Login = '" + txtLogin.Text.Trim() + "'AND Password = '" + txtPassword.Password.Trim() + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query,sqlCon);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
             if (dtbl.Rows.Count == 1)
-                {
-                    string query1 = "INSERT INTO dbo.ActiveUser(ID) SELECT UserID from dbo.tblUser WHERE Login = '" + txtLogin.Text + "'";
-                    SqlDataAdapter sd = new SqlDataAdapter(query1, sqlCon);
-                    DataTable dtbl1 = new DataTable();
-                    sd.Fill(dtbl1);
-                    FillYourDetails win = new FillYourDetails();
-                    win.Show();
-                    this.Close();
+            {
+                string query1 = "INSERT INTO dbo.ActiveUser(ID) SELECT UserID from dbo.tblUser WHERE Login = '" + txtLogin.Text + "'";
+                SqlDataAdapter sd = new SqlDataAdapter(query1, sqlCon);
+                DataTable dtbl1 = new DataTable();
+                sd.Fill(dtbl1);
+                FillYourDetails win = new FillYourDetails();
+                win.Show();
+                this.Close();
 
             }
+
             else
                 MessageBox.Show("Incorrect Login or Password");
 

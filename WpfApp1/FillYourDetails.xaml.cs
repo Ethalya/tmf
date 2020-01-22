@@ -23,7 +23,7 @@ namespace WpfApp1
     public partial class FillYourDetails : Window
     {
        
-        SqlConnection sqlCon = new SqlConnection(@"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;");
 
         public FillYourDetails()
         {
@@ -194,7 +194,9 @@ namespace WpfApp1
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Table win = new Table();
+            win.Show();
+            
         }
 
         private void Gender_TextInput(object sender, TextCompositionEventArgs e)
@@ -217,7 +219,7 @@ namespace WpfApp1
 
         private void Nickname_Loaded(object sender, RoutedEventArgs e)
         {
-            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            string constr = @"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT Nickname FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
@@ -238,7 +240,7 @@ namespace WpfApp1
 
         private void Server_Loaded(object sender, RoutedEventArgs e)
         {
-            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            string constr = @"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT Server FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
@@ -259,7 +261,7 @@ namespace WpfApp1
 
         private void Division_Loaded(object sender, RoutedEventArgs e)
         {
-            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            string constr = @"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT Division FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
@@ -280,7 +282,7 @@ namespace WpfApp1
 
         private void Role_Loaded(object sender, RoutedEventArgs e)
         {
-            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            string constr = @"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT Role FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
@@ -301,7 +303,7 @@ namespace WpfApp1
 
         private void Contact_Loaded(object sender, RoutedEventArgs e)
         {
-            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            string constr = @"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT Discord_id FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
@@ -322,7 +324,7 @@ namespace WpfApp1
 
         private void Gender_Loaded(object sender, RoutedEventArgs e)
         {
-            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            string constr = @"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT Gender FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
@@ -343,7 +345,7 @@ namespace WpfApp1
 
         private void Char1_Loaded(object sender, RoutedEventArgs e)
         {
-            string constr = @"Data Source = USER-KOMPUTER\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+            string constr = @"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT Top_Character FROM dbo.tblUser t INNER JOIN ActiveUser a on t.UserID = a.ID WHERE t.UserID LIKE a.ID"))
