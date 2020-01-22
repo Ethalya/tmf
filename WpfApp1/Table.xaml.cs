@@ -25,18 +25,11 @@ namespace WpfApp1
         public Table()
         {
             InitializeComponent();
+            DataContext = new ComboBoxViewModel();
           
         }
-    
-
-       
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        
+        public void GridLoad()
         {
             sqlCon.Open();
             string Query = "SELECT Nickname, Server, Division,Role, Discord_id,Gender,Top_Character FROM dbo.tblUser";
@@ -47,22 +40,38 @@ namespace WpfApp1
             DataTable dt = new DataTable("dbo.tblUser");
             da.Fill(dt);
             TableGrid.ItemsSource = dt.DefaultView;
-            TableGrid.Columns[0].Visibility = 0;
-            da.Update(dt);
             sqlCon.Close();
-
-
+           
         }
 
-        private void TableGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
+       
 
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            sqlCon.Close();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
+            sqlCon.Open();
+            string Query = "SELECT Nickname, Server, Division,Role, Discord_id,Gender,Top_Character FROM dbo.tblUser WHERE Role = '" + Roles.Text + "' AND Division ='" + Rank.Text + "'";
+            SqlCommand createCommand = new SqlCommand(Query, sqlCon);
+            createCommand.ExecuteNonQuery();
 
+            SqlDataAdapter da = new SqlDataAdapter(createCommand);
+            DataTable dt = new DataTable("dbo.tblUser");
+            da.Fill(dt);
+            TableGrid.ItemsSource = dt.DefaultView;
+            sqlCon.Close();
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            GridLoad();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            GridLoad();
         }
     }
 }

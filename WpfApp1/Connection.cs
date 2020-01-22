@@ -13,7 +13,7 @@ namespace WpfApp1
   public class Connection
     {
         
-       public SqlConnection sqlCon = new SqlConnection(@"Data Source = DESKTOP-NQU0NJF\SQLSERVER; Initial Catalog = TeammateFinder; Integrated Security=True;");
+       public SqlConnection sqlCon = new SqlConnection(@"Data Source = .\SQLSERVER; Initial Catalog = TeammateFinder; Integrated Security=True;");
         public void OpenConnection()
         {
             if (sqlCon.State == System.Data.ConnectionState.Closed)
@@ -28,7 +28,8 @@ namespace WpfApp1
                 sqlCon.Close();
             }
         }
-        public SqlConnection getConnection()
+
+        public SqlConnection GetConnection()
         {
             return sqlCon;
         }

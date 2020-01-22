@@ -22,12 +22,13 @@ namespace WpfApp1
     /// </summary>
     public partial class FillYourDetails : Window
     {
-       
+        
         SqlConnection sqlCon = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;");
 
         public FillYourDetails()
         {
             InitializeComponent();
+           
             FillComboFromServers();
             FillComboFromDivision();
             FillComboFromRole();
@@ -141,15 +142,8 @@ namespace WpfApp1
 
         private void Char1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
             FillComboFromCharacters();
-            
-
         }
-
-      
-
-       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

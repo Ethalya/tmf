@@ -20,7 +20,7 @@ namespace WpfApp1
     /// </summary>
     public partial class Rejestracja : Window
     {
-        string connectionString = @"Data Source = .SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
+        string connectionString = @"Data Source = .\SQLEXPRESS; Initial Catalog = TeammateFinder; Integrated Security=True;";
         public Rejestracja()
         {
             InitializeComponent();
@@ -74,11 +74,12 @@ namespace WpfApp1
         {
             txtName.Text = txtPassword.Password = txtConfirmPassword.Password;
         }
-        private void TxtName_TextChanged(object sender, TextChangedEventArgs e)
+     
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Logowanie win = new Logowanie();
+            win.Show();
+            this.Close();
         }
-
-
     }
 }
