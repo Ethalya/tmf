@@ -121,6 +121,14 @@
                     <DropShadowEffect/>
                 </Image.Effect>
             </Image>
+            <Button Content="Logout" HorizontalAlignment="Left" Margin="10,708,0,0" VerticalAlignment="Top" Width="163" FontFamily="Tw Cen MT" FontSize="20" Height="53" Foreground="White" Click="Button_Click_2">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="button2.png"/>
+                </Button.Background>
+            </Button>
 
 
         </Grid>

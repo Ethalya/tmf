@@ -357,5 +357,13 @@ namespace WpfApp1
                 }
             }
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Logowanie win = new Logowanie();
+            win.Show();
+            this.Close();
+
+        }
     }
 }
