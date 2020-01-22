@@ -4,29 +4,95 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
         mc:Ignorable="d"
         Title="FillYourDetails" Height="800" Width="1200" Closing="Window_Closing"  >
     <Border Padding="15">
-        <Grid>
-            <TextBlock FontSize="50" HorizontalAlignment="Center" Margin="471,0,460,0" ><Run Text="Your Panel"/></TextBlock>
-            <TextBlock Text="Nickname:" FontSize="40" Margin="24,134,942,538"></TextBlock>
-            <TextBox Name="Nickname" Margin="225,134,651,555" FontSize="30" Loaded="Nickname_Loaded" />
-            <TextBlock Text="Server:" FontSize="40" Margin="88,206,942,470"></TextBlock>
-            <TextBlock Text="Division:" FontSize="40" Margin="63,274,942,402"></TextBlock>
-            <TextBlock Text="Role:" FontSize="40" Margin="126,342,942,330"></TextBlock>
-            <TextBlock Text="Discord id:" FontSize="40" Margin="24,414,942,256"></TextBlock>
-            <TextBox Name="Contact" FontSize="30" Margin="225,418,651,271" TextChanged="Contact_TextChanged" Loaded="Contact_Loaded"></TextBox>
-            <TextBlock Text="Top character:" FontSize="40" Margin="726,117,162,555"></TextBlock>
-            <ComboBox Name="Char1" FontSize="30" Margin="726,189,150,500" TextInput="Char1_TextInput" IsTextSearchEnabled="True" SelectionChanged="Char1_SelectionChanged_1" Loaded="Char1_Loaded" />
+        <Grid Margin="-15">
+            <Grid.Background>
+                <ImageBrush ImageSource="zoe.jpeg"/>
+            </Grid.Background>
+            <TextBlock Text="Nickname:" FontSize="40" Margin="100,148,913,575" FontFamily="Tw Cen MT" Foreground="White"></TextBlock>
+            <TextBox Name="Nickname" Margin="293,137,637,575" FontSize="40" Loaded="Nickname_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <TextBlock Text="Server:" FontSize="40" Margin="151,215,920,506" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.427,0.4"></TextBlock>
+            <TextBlock Text="Division:" FontSize="40" Margin="132,283,920,438" FontFamily="Tw Cen MT" Foreground="White"></TextBlock>
+            <TextBlock Text="Role:" FontSize="40" Margin="190,346,920,371" FontFamily="Tw Cen MT" Foreground="White"></TextBlock>
+            <TextBlock Text="Discord id:" FontSize="40" Margin="100,416,920,307" FontFamily="Tw Cen MT" Foreground="White"></TextBlock>
+            <TextBox Name="Contact" FontSize="40" Margin="293,405,637,307" TextChanged="Contact_TextChanged" Loaded="Contact_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" ClipToBounds="True" Width="264" Height="59" VerticalAlignment="Stretch"></TextBox>
+            <TextBlock FontSize="40" Margin="24,544,920,179" FontFamily="Tw Cen MT" Foreground="White"><Run Text="Main"/><Run Text=" character:"/></TextBlock>
+            <ComboBox Name="Char1" FontSize="40" Margin="293,533,637,179" TextInput="Char1_TextInput" IsTextSearchEnabled="True" SelectionChanged="Char1_SelectionChanged_1" Loaded="Char1_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center"/>
 
-            <Button x:Name="ConfirmButton" Content="Confirm" FontSize="50" Margin="141,600,651,45" Click="Button_Click"></Button>
-            <ComboBox x:Name="Server" HorizontalAlignment="Left" Margin="225,206,0,0" VerticalAlignment="Top" Width="286" Height="50" FontSize="30" ItemsSource="{Binding dr,Mode=OneWay}" TextInput="Server_TextInput" Loaded="Server_Loaded" />
-            <ComboBox x:Name="Division" HorizontalAlignment="Left" VerticalAlignment="Top" Width="286" Margin="225,274,0,0" Height="50" FontSize="30" TextInput="Division_TextInput_1" Loaded="Division_Loaded" />
-            <ComboBox x:Name="Role" HorizontalAlignment="Left" VerticalAlignment="Top" Width="286" Margin="225,346,0,0" Height="50" FontSize="30" TextInput="Role_TextInput_1" Loaded="Role_Loaded" />
-            <Button x:Name="FindButton" Content="Find a teammate!" Margin="701,600,91,45" Click="Button_Click_1" FontSize="45"  ></Button>
-            <TextBlock Margin="74,483,942,189" Text="Gender:" FontSize="40" ></TextBlock>
-            <ComboBox x:Name="Gender" HorizontalAlignment="Left" VerticalAlignment="Top" Width="286" Margin="225,483,0,0" Height="50" TextInput="Gender_TextInput" FontSize="30" Loaded="Gender_Loaded" />
-            
+            <Button x:Name="ConfirmButton" Content="Save" FontSize="40" Margin="293,630,650,65" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="button2.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <ComboBox x:Name="Server" Margin="293,206,637,506" FontSize="40" ItemsSource="{Binding dr,Mode=OneWay}" TextInput="Server_TextInput" Loaded="Server_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" Block.TextAlignment="Center"/>
+            <ComboBox x:Name="Division" Margin="293,277,637,435" FontSize="40" TextInput="Division_TextInput_1" Loaded="Division_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center" />
+            <ComboBox x:Name="Role" Margin="293,341,637,371" FontSize="40" TextInput="Role_TextInput_1" Loaded="Role_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center"/>
+            <Button x:Name="FindButton" Content="Find a teammate!" Margin="716,614,24,23" Click="Button_Click_1" FontSize="40" FontFamily="Tw Cen MT" Foreground="White"  >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="button2.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <TextBlock Margin="130,480,925,241" Text="Gender:" FontSize="40" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.5,0.5" >
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0.477"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0.742"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform></TextBlock>
+            <ComboBox x:Name="Gender" Margin="293,469,637,243" TextInput="Gender_TextInput" FontSize="40" Loaded="Gender_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center" />
+            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="393" Margin="151,10,0,0" Source="Panel.png"/>
+            <Image HorizontalAlignment="Left" Height="208" Margin="888,10,0,0" VerticalAlignment="Top" Width="296" Source="TMF Logo4.png"/>
+
 
         </Grid>
     </Border>

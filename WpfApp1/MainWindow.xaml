@@ -4,39 +4,84 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="MainWindow" Height="800" Width="1200" >
     <Border Padding="15">
 
         <Grid Margin="-15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="32*"/>
+                <ColumnDefinition Width="1029*"/>
+                <ColumnDefinition Width="131*"/>
+            </Grid.ColumnDefinitions>
             <Grid.Background>
                 <ImageBrush ImageSource="Soraka.jpg"/>
             </Grid.Background>
-            <TextBlock Text="Are you looking for a Teammate?" FontSize="40" TextAlignment="Center" Margin="10,275,551,423" Foreground="White" FontFamily="Tw Cen MT">
+            <TextBlock Text="Are you looking for a Teammate?" FontSize="40" TextAlignment="Center" Margin="12,275,420.503,423" Foreground="White" FontFamily="Tw Cen MT" Width="628" Grid.ColumnSpan="2">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect></TextBlock>
-            <TextBlock FontSize="60" TextAlignment="Center" Margin="10,329,551,329" Foreground="White" FontFamily="Tw Cen MT">
+            <TextBlock FontSize="60" TextAlignment="Center" Margin="10,329,419.503,329" Foreground="White" FontFamily="Tw Cen MT" Grid.ColumnSpan="2">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text="Sign "/><Run Text="up"/><Run Text=" "/><Run Text="now!"/></TextBlock>
-            <Button Margin="155,562,711,105" Click="Button_Click_2" Content="Sign up" FontSize="40" Foreground="White" BorderBrush="{x:Null}" FontFamily="Tw Cen MT">
+            <Button Margin="123,562,579.503,105" Click="Button_Click_2" Content="Sign up" FontSize="40" Foreground="White" BorderBrush="{x:Null}" FontFamily="Tw Cen MT" Grid.Column="1">
                 <Button.Effect>
                     <DropShadowEffect Opacity="0.5" Direction="313"/>
                 </Button.Effect>
                 <Button.Background>
                     <ImageBrush ImageSource="button1.png"/>
                 </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
             </Button>
-            <Button Margin="155,445,711,223" Content="Login" FontSize="40" Click="Button_Click_3" Foreground="White" BorderBrush="{x:Null}" FontFamily="Tw Cen MT">
+            <Button Margin="123,445,579.503,223" Content="Login" FontSize="40" Click="Button_Click_3" Foreground="White" FontFamily="Tw Cen MT" Grid.Column="1" BorderBrush="{x:Null}" BorderThickness="0">
                 <Button.Effect>
                     <DropShadowEffect Opacity="0.5"/>
                 </Button.Effect>
                 <Button.Background>
                     <ImageBrush ImageSource="button1.png"/>
                 </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
             </Button>
-            <Image HorizontalAlignment="Left" Height="258" Margin="105,36,0,0" VerticalAlignment="Top" Width="559" Source="TMF Logo2.png"/>
+            <Image HorizontalAlignment="Left" Height="258" Margin="73,36,0,0" VerticalAlignment="Top" Width="559" Source="TMF Logo2.png" Grid.Column="1"/>
         </Grid>
     </Border>
 </Window>

@@ -4,20 +4,103 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
         mc:Ignorable="d"
         Title="Rejestracja" Height="800" Width="1200">
     <Border Padding="15">
-        
-            <Grid Margin="-5,-5,-5,0" Height="71" VerticalAlignment="Top">
-            <TextBlock Text="Register" FontSize="60" HorizontalAlignment="Center" Margin="434,57,457,-74"></TextBlock>
-            <TextBlock Text="Login:" FontSize="40" Margin="220,255,826,-238"></TextBlock>
-            <TextBox Name="txtName" Padding="2" Margin="351,255,279,-238"
-                     FontSize="35" TextChanged="TxtName_TextChanged"></TextBox>
-            <TextBlock Text="Password:" FontSize="40" Margin="154,352,828,-335"></TextBlock>
-            <PasswordBox Name="txtPassword" Padding="2" FontSize="40" Margin="351,352,279,-335"  ></PasswordBox>
-            <Button Click="Button_Click" Content="Sign up!" FontSize="40" Margin="456,574,457,-559" HorizontalAlignment="Center" VerticalAlignment="Center" ></Button>
-            <TextBlock Text="Confirm Password:" FontSize="40" Margin="-1,444,841,-427"></TextBlock>
-            <PasswordBox Name="txtConfirmPassword" Padding="2" Margin="351,444,279,-427" FontSize="35"></PasswordBox>
+        <Border.Background>
+            <ImageBrush ImageSource="jhin.jpg"/>
+        </Border.Background>
+
+        <Grid Margin="-5,-5,-5,0" Height="71" VerticalAlignment="Top">
+            <TextBlock FontSize="40" Margin="220,255,826,-238" Foreground="White" FontFamily="Tw Cen MT">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect><Run Text=" "/><Run Text="Login:"/></TextBlock>
+            <TextBox Name="txtName" Padding="2" Margin="353,255,277,-238"
+                     FontSize="35" TextChanged="TxtName_TextChanged" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"/>
+            <TextBlock FontSize="40" Margin="154,352,828,-335" Foreground="White" FontFamily="Tw Cen MT">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect><Run Text=" "/><Run Text="Password:"/></TextBlock>
+            <PasswordBox Name="txtPassword" Padding="2" FontSize="40" Margin="353,352,277,-335" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"  ></PasswordBox>
+            <Button Click="Button_Click" Content="Sign up!" FontSize="40" Margin="449,541,371,-570" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="354" Foreground="White" FontFamily="Tw Cen MT" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="button2.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <TextBlock FontSize="40" Margin="-1,444,841,-427" Foreground="White" FontFamily="Tw Cen MT">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect><Run Text="   "/><Run Text="Confirm Password:"/></TextBlock>
+            <PasswordBox Name="txtConfirmPassword" Padding="2" Margin="353,444,277,-427" FontSize="35" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"></PasswordBox>
+            <Image HorizontalAlignment="Left" Height="188" Margin="18,21,0,-138" VerticalAlignment="Top" Width="545" RenderTransformOrigin="-0.403,-0.257" Source="register.png">
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.398"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="register.png"/>
+                </Image.OpacityMask>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="196" Margin="832,0,0,-125" VerticalAlignment="Top" Width="342" Source="TMF Logo4.png"/>
+            <Button Content="Login" HorizontalAlignment="Left" Height="100" Margin="965,645,0,-674" VerticalAlignment="Top" Width="209" FontSize="40" FontFamily="Tw Cen MT" Foreground="White" Click="Button_Click_1">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="button2.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
         </Grid>
     </Border>
 </Window>
