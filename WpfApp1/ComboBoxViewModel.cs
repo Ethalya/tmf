@@ -10,7 +10,8 @@ namespace WpfApp1
     {
         public List<string> Role { get; set; }
         public List<string> Rank { get; set; }
-
+        public List<string> Serv { get; set; }
+ 
         public ComboBoxViewModel()
         {
             Role = new List<string>()
@@ -35,6 +36,26 @@ namespace WpfApp1
                 "Grandmaster",
                 "Challenger",
 
+            };
+            Serv = new List<string>()
+            {
+                "Brazil",
+                "People's Republic of China",
+                "Europe Nordic & East",
+                "Europe West",
+                "Japan",
+                "Republic of Korea",
+                "Latin America North",
+                "Latin America South",
+                "North America",
+                "Oceania",
+                "Philippines",
+                "Russia",
+                "Singapore and Malaysia",
+                "Thailand",
+                "Turkey",
+                "Taiwan",
+                "Vietnam",
             };
         }
         

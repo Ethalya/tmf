@@ -54,7 +54,8 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             sqlCon.Open();
-            string Query = "SELECT Nickname, Server, Division,Role, Discord_id,Gender,Top_Character FROM dbo.tblUser WHERE Role = '" + Roles.Text + "' AND Division ='" + Rank.Text + "'";
+            string Query = "SELECT Nickname, Server, Division,Role, Discord_id,Gender,Top_Character FROM dbo.tblUser WHERE Role = '" + Roles.Text + "' AND Division ='" + Rank.Text + "'AND Server ='" + Servers.Text + "'"; 
+                
             SqlCommand createCommand = new SqlCommand(Query, sqlCon);
             createCommand.ExecuteNonQuery();
 
@@ -73,5 +74,7 @@ namespace WpfApp1
         {
             GridLoad();
         }
+
+        
     }
 }
