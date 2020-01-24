@@ -41,7 +41,7 @@ namespace WpfApp1
             {
                 "Brazil",
                 "People's Republic of China",
-                "Europe Nordic & East",
+                "EUNE",
                 "Europe West",
                 "Japan",
                 "Republic of Korea",
