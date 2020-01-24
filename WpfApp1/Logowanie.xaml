@@ -11,12 +11,8 @@
     <Border Padding="15">
         <Grid Margin="-15">
             <Grid.Background>
-                <ImageBrush ImageSource="/resources/Ashe.jpg"/>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/ashe.jpg"/>
             </Grid.Background>
-            <TextBlock Text="Login:" FontSize="40" Margin="115,474,935,247" RenderTransformOrigin="0.93,0.482" Foreground="White" FontFamily="Tw Cen MT" >
-                <TextBlock.Effect>
-                    <DropShadowEffect/>
-                </TextBlock.Effect></TextBlock>
             <TextBox Name="txtLogin" FontSize="35" Margin="233,474,633,248" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"></TextBox>
             <TextBlock Text="Password:" FontSize="40" Margin="47,537,935,177" Foreground="White" FontFamily="Tw Cen MT">
                 <TextBlock.Effect>
@@ -28,7 +24,7 @@
                     <DropShadowEffect/>
                 </Button.Effect>
                 <Button.Background>
-                    <ImageBrush ImageSource="./resources/button3.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button3.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
@@ -55,7 +51,7 @@
                     <DropShadowEffect/>
                 </Button.Effect>
                 <Button.Background>
-                    <ImageBrush ImageSource="./resources/button3.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button3.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
@@ -77,12 +73,12 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Image HorizontalAlignment="Left" Height="201" Margin="838,10,0,0" VerticalAlignment="Top" Width="346" Source="./resources/TMF Logo3.png" Stretch="Fill">
+            <Image HorizontalAlignment="Left" Height="201" Margin="838,10,0,0" VerticalAlignment="Top" Width="346" Source="pack://siteoforigin:,,,/resources/TMF Logo3.png" Stretch="Fill">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
                 <Image.OpacityMask>
-                    <ImageBrush ImageSource="./resources/TMF Logo3.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/TMF Logo3.png"/>
                 </Image.OpacityMask>
             </Image>
             <TextBlock HorizontalAlignment="Left" Margin="853,580,0,0" TextWrapping="Wrap" Text="You don't have an account?" VerticalAlignment="Top" Height="34" Width="314" FontSize="24" FontFamily="Tw Cen MT" TextAlignment="Center" Foreground="White">
@@ -90,11 +86,15 @@
                     <DropShadowEffect/>
                 </TextBlock.Effect>
             </TextBlock>
-            <Image HorizontalAlignment="Left" Height="95" Margin="233,352,0,0" VerticalAlignment="Top" Width="328" Source="./resources/login.png">
+            <Image HorizontalAlignment="Left" Height="95" Margin="233,352,0,0" VerticalAlignment="Top" Width="328" Source="pack://siteoforigin:,,,/resources/login.png">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
             </Image>
+            <TextBlock Text="Login:" FontSize="40" Margin="115,474,935,247" RenderTransformOrigin="0.93,0.482" Foreground="White" FontFamily="Tw Cen MT" >
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect></TextBlock>
         </Grid>
     </Border>
 </Window>

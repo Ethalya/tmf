@@ -15,9 +15,9 @@ namespace WpfApp1
         {
             Role = new List<string>()
             {
-                "TOP",
-                "MID",
-                "Jungle",
+                "Top",
+                "Mid",
+                "Jungler",
                 "Support",
                 "ADC",
 

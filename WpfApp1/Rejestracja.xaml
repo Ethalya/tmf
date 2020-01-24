@@ -10,7 +10,7 @@
         Title="Rejestracja" Height="800" Width="1200">
     <Border Padding="15">
         <Border.Background>
-            <ImageBrush ImageSource="jhin.jpg"/>
+            <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/jhin.jpg"/>
         </Border.Background>
 
         <Grid Margin="-5,-5,-5,0" Height="71" VerticalAlignment="Top">
@@ -30,7 +30,7 @@
                     <DropShadowEffect/>
                 </Button.Effect>
                 <Button.Background>
-                    <ImageBrush ImageSource="button2.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
@@ -57,7 +57,7 @@
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text="   "/><Run Text="Confirm Password:"/></TextBlock>
             <PasswordBox Name="txtConfirmPassword" Padding="2" Margin="353,444,277,-427" FontSize="35" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"></PasswordBox>
-            <Image HorizontalAlignment="Left" Height="188" Margin="18,21,0,-138" VerticalAlignment="Top" Width="545" RenderTransformOrigin="-0.403,-0.257" Source="register.png">
+            <Image HorizontalAlignment="Left" Height="188" Margin="18,21,0,-138" VerticalAlignment="Top" Width="545" RenderTransformOrigin="-0.403,-0.257" Source="pack://siteoforigin:,,,/resources/register.png">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
@@ -70,10 +70,10 @@
                     </TransformGroup>
                 </Image.RenderTransform>
                 <Image.OpacityMask>
-                    <ImageBrush ImageSource="register.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/register.png"/>
                 </Image.OpacityMask>
             </Image>
-            <Image HorizontalAlignment="Left" Height="196" Margin="832,0,0,-125" VerticalAlignment="Top" Width="342" Source="TMF Logo4.png">
+            <Image HorizontalAlignment="Left" Height="196" Margin="832,0,0,-125" VerticalAlignment="Top" Width="342" Source="pack://siteoforigin:,,,/resources/TMF Logo4.png">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
@@ -83,7 +83,7 @@
                     <DropShadowEffect/>
                 </Button.Effect>
                 <Button.Background>
-                    <ImageBrush ImageSource="button2.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">

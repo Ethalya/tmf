@@ -8,7 +8,6 @@ using System.Data;
 using System.ComponentModel;
 
 
-
 namespace WpfApp1
 {
   public class Connection

@@ -62,7 +62,9 @@
     <Compile Include="FillYourDetails.xaml.cs">
       <DependentUpon>FillYourDetails.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Logowanie.xaml.cs" />
+    <Compile Include="Logowanie.xaml.cs">
+      <DependentUpon>Logowanie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
     </Compile>
@@ -74,8 +76,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Logowanie.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -102,6 +104,11 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -109,8 +116,9 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,38 +128,88 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\resources\ashe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\button3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\jhin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\kda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\Soraka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\TMF Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\TMF Logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\TMF Logo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\zoe.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="resources\ashe.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\button1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\button3.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="resources\jhin.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\logo.png" />
+    <None Include="resources\kda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\register.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\Soraka.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\TMF Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="resources\TMF Logo2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resources\zoe.jpeg" />
+    <None Include="resources\TMF Logo3.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\button2.png" />
-    <Resource Include="resources\button3.png" />
-    <Resource Include="resources\kda.jpg" />
-    <Resource Include="resources\login.png" />
-    <Resource Include="resources\Panel.png" />
-    <Resource Include="resources\register.png" />
-    <Resource Include="resources\TMF Logo3.png" />
-    <Resource Include="resources\TMF Logo4.png" />
+    <None Include="resources\TMF Logo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\zoe.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

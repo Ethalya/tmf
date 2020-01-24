@@ -11,7 +11,7 @@
     <Border Padding="15">
         <Grid Margin="-15">
             <Grid.Background>
-                <ImageBrush ImageSource="./resources/zoe.jpeg"/>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/zoe.jpeg"/>
             </Grid.Background>
             <TextBlock Text="Nickname:" FontSize="40" Margin="100,148,913,575" FontFamily="Tw Cen MT" Foreground="White">
                 <TextBlock.Effect>
@@ -46,7 +46,7 @@
                     <DropShadowEffect/>
                 </Button.Effect>
                 <Button.Background>
-                    <ImageBrush ImageSource="./resources/button2.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
@@ -76,7 +76,7 @@
                     <DropShadowEffect/>
                 </Button.Effect>
                 <Button.Background>
-                    <ImageBrush ImageSource="./resources/button2.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
@@ -111,12 +111,12 @@
                     </TransformGroup>
                 </TextBlock.RenderTransform></TextBlock>
             <ComboBox x:Name="Gender" Margin="293,469,637,243" TextInput="Gender_TextInput" FontSize="40" Loaded="Gender_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center" />
-            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="393" Margin="151,10,0,0" Source="Panel.png">
+            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="393" Margin="151,10,0,0" Source="pack://siteoforigin:,,,/resources/Panel.png">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
             </Image>
-            <Image HorizontalAlignment="Left" Height="208" Margin="888,10,0,0" VerticalAlignment="Top" Width="296" Source="TMF Logo4.png">
+            <Image HorizontalAlignment="Left" Height="208" Margin="888,10,0,0" VerticalAlignment="Top" Width="296" Source="pack://siteoforigin:,,,/resources/TMF Logo4.png">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
@@ -126,8 +126,27 @@
                     <DropShadowEffect/>
                 </Button.Effect>
                 <Button.Background>
-                    <ImageBrush ImageSource="./resources/button2.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
                 </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
             </Button>
 
 
