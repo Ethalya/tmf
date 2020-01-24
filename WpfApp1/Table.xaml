@@ -12,47 +12,49 @@
             <Grid.Background>
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/kda.jpg"/>
             </Grid.Background>
-            <DataGrid x:Name="TableGrid" HorizontalAlignment="Center" Margin="109,113,98,49" Foreground="Black" Background="Transparent" BorderBrush="{x:Null}" AutoGenerateColumns="True">
+            <DataGrid x:Name="TableGrid" IsReadOnly="True" Foreground="Black" Background="Transparent" BorderBrush="{x:Null}" AutoGenerateColumns="True" Margin="137,147,110,130" Width="Auto" Height="Auto" HorizontalAlignment="Center">
                 <DataGrid.CellStyle>
-                    <Style TargetType="DataGridCell">
-                        <Style.Triggers>
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="Foreground" Value="White" />
-                                <Setter Property="Background" Value="Violet" />
-                            </Trigger>
-                        </Style.Triggers>
+                    <Style TargetType="{x:Type DataGridCell}">
                         <Setter Property="Background" Value="DarkViolet" />
                         <Setter Property="Foreground" Value="White"/>
                         <Setter Property="FontSize" Value="30"/>
                         <Setter Property="FontFamily" Value="Tw Cen MT"/>
                         <Setter Property="BorderBrush" Value="Transparent"/>
                         <Setter Property="Padding" Value="10,5,10,5"/>
+                        <Setter Property="MinWidth" Value="100"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter Property="Background" Value="Violet" />
+                            </Trigger>
+                        </Style.Triggers>
                     </Style>
                 </DataGrid.CellStyle>
+
                 <DataGrid.RowStyle>
-                    <Style TargetType="DataGridRow">
+                    <Style TargetType="{x:Type DataGridRow}">
                         <Setter Property="Height"  Value="40"/>
                         <Setter Property="Margin" Value="-2, -2, -2, -2"/>
                         <Setter Property="BorderBrush" Value="Transparent"/>
                         <Setter Property="TextBlock.TextAlignment" Value="Center"/>
                     </Style>
-            
+
                 </DataGrid.RowStyle>
                 <DataGrid.Resources>
                     <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}" >
                         <Setter Property="Background" Value="HotPink" />
                         <Setter Property="Foreground" Value="White" />
+                        <Setter Property="FontFamily" Value="Tw Cen MT"/>
+                        <Setter Property="FontSize" Value="20"/>
                         <Setter Property="BorderBrush" Value="Transparent"/>
-                        <Setter Property="Margin" Value="-1,-1,0,0" />
-                        <Setter Property="Height" Value="28" />
-                        <Setter Property="Width" Value="auto"/>
                         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="Height" Value="30"/>
                     </Style>
                 </DataGrid.Resources>
             </DataGrid>
-            <ComboBox x:Name="Roles" HorizontalAlignment="Left" ItemsSource="{Binding Role}" VerticalAlignment="Top" Width="236" Margin="264,32,0,0" Height="56" FontFamily="Tw Cen MT" Foreground="Black" FontSize="35"/>
-            <ComboBox x:Name="Rank" HorizontalAlignment="Left" ItemsSource="{Binding Rank}" VerticalAlignment="Top" Width="228" Margin="596,32,0,0" Height="56" FontFamily="Tw Cen MT" Foreground="Black" FontSize="35"/>
-            <Button  Content="Search" FontSize="35" HorizontalAlignment="Left" Margin="910,10,0,668"  Width="244" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White">
+            <ComboBox x:Name="Roles" HorizontalAlignment="Left" ItemsSource="{Binding Role}" VerticalAlignment="Top" Width="236" Margin="369,65,0,0" Height="56" FontFamily="Tw Cen MT" Foreground="Black" FontSize="35"/>
+            <ComboBox x:Name="Rank" HorizontalAlignment="Left" ItemsSource="{Binding Rank}" VerticalAlignment="Top" Width="246" Margin="658,65,0,0" Height="56" FontFamily="Tw Cen MT" Foreground="Black" FontSize="30"/>
+            <Button  Content="Search" FontSize="35" HorizontalAlignment="Left" Margin="918,49,0,635"  Width="244" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.547,0.845">
                 <Button.Background>
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
                 </Button.Background>
@@ -76,14 +78,15 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Image HorizontalAlignment="Left" Height="117" Margin="10,0,0,0" VerticalAlignment="Top" Width="229" Source="pack://siteoforigin:,,,/resources/TMF Logo4.png"/>
-            <Button Content="Show All" HorizontalAlignment="Left" Margin="940,670,0,0" VerticalAlignment="Top" Width="244" Height="91" Foreground="White" FontSize="35" FontFamily="Tw Cen MT" Click="Button_Click_2">
+            <Image HorizontalAlignment="Left" Height="117" Margin="10,644,0,0" VerticalAlignment="Top" Width="229" Source="pack://siteoforigin:,,,/resources/TMF Logo4.png"/>
+            <Button Content="Show All" HorizontalAlignment="Left" Margin="896,670,0,0" VerticalAlignment="Top" Width="288" Height="91" Foreground="White" FontSize="35" FontFamily="Tw Cen MT" Click="Button_Click_2">
                 <Button.Background>
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="White"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Left"/>
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type Button}">
@@ -101,6 +104,11 @@
                     </Style>
                 </Button.Style>
             </Button>
+            <ComboBox x:Name="Servers" ItemsSource="{Binding Serv}" HorizontalAlignment="Left" Margin="64,65,0,0" VerticalAlignment="Top" Width="246" Height="56" FontFamily="Tw Cen MT" FontSize="30"/>
+            <Image HorizontalAlignment="Left" Height="78" Margin="88,0,0,0" VerticalAlignment="Top" Width="204" Source="pack://siteoforigin:,,,/resources/server.png"/>
+            <Image HorizontalAlignment="Left" Height="78" Margin="386,0,0,0" VerticalAlignment="Top" Width="204" Source="pack://siteoforigin:,,,/resources/role.png"/>
+            <Image HorizontalAlignment="Left" Height="78" Margin="685,0,0,0" VerticalAlignment="Top" Width="204" Source="pack://siteoforigin:,,,/resources/division.png"/>
+
         </Grid>
     </Border>
 </Window>
