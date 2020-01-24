@@ -10,9 +10,9 @@
     <Border Padding="15">
         <Grid Margin="-15">
             <Grid.Background>
-                <ImageBrush ImageSource="kda.jpg"/>
+                <ImageBrush ImageSource="./resources/kda.jpg"/>
             </Grid.Background>
-            <DataGrid x:Name="TableGrid" HorizontalAlignment="Center" Margin="109,113,98,49" Foreground="Black" Background="Transparent" BorderBrush="{x:Null}" AutoGenerateColumns="True">
+            <DataGrid x:Name="TableGrid" HorizontalAlignment="Left" Margin="81,113,0,97" Foreground="Black" Background="Transparent" BorderBrush="{x:Null}" AutoGenerateColumns="True" Width="1018">
                 <DataGrid.CellStyle>
                     <Style TargetType="DataGridCell">
                         <Style.Triggers>
@@ -36,7 +36,7 @@
                         <Setter Property="BorderBrush" Value="Transparent"/>
                         <Setter Property="TextBlock.TextAlignment" Value="Center"/>
                     </Style>
-            
+
                 </DataGrid.RowStyle>
                 <DataGrid.Resources>
                     <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}" >
@@ -54,7 +54,7 @@
             <ComboBox x:Name="Rank" HorizontalAlignment="Left" ItemsSource="{Binding Rank}" VerticalAlignment="Top" Width="228" Margin="596,32,0,0" Height="56" FontFamily="Tw Cen MT" Foreground="Black" FontSize="35"/>
             <Button  Content="Search" FontSize="35" HorizontalAlignment="Left" Margin="910,10,0,668"  Width="244" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White">
                 <Button.Background>
-                    <ImageBrush ImageSource="button2.png"/>
+                    <ImageBrush ImageSource="./resources/button2.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
@@ -76,10 +76,10 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Image HorizontalAlignment="Left" Height="117" Margin="10,0,0,0" VerticalAlignment="Top" Width="229" Source="TMF Logo4.png"/>
+            <Image HorizontalAlignment="Left" Height="117" Margin="10,0,0,0" VerticalAlignment="Top" Width="229" Source="./resources/TMF Logo4.png"/>
             <Button Content="Show All" HorizontalAlignment="Left" Margin="940,670,0,0" VerticalAlignment="Top" Width="244" Height="91" Foreground="White" FontSize="35" FontFamily="Tw Cen MT" Click="Button_Click_2">
                 <Button.Background>
-                    <ImageBrush ImageSource="button2.png"/>
+                    <ImageBrush ImageSource="./resources/button2.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">

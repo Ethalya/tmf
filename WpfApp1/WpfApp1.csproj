@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,24 +56,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ComboBoxViewModel.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="DatabaseObject.cs" />
     <Compile Include="FillYourDetails.xaml.cs">
       <DependentUpon>FillYourDetails.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Logowanie.xaml.cs">
-      <DependentUpon>Logowanie.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Logowanie.xaml.cs" />
     <Compile Include="Rejestracja.xaml.cs">
       <DependentUpon>Rejestracja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Table.xaml.cs">
+      <DependentUpon>Table.xaml</DependentUpon>
     </Compile>
     <Page Include="FillYourDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Logowanie.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -90,15 +93,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Table.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -107,9 +109,8 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,6 +118,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\ashe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\jhin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Soraka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\TMF Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\TMF Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\zoe.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\button2.png" />
+    <Resource Include="resources\button3.png" />
+    <Resource Include="resources\kda.jpg" />
+    <Resource Include="resources\login.png" />
+    <Resource Include="resources\Panel.png" />
+    <Resource Include="resources\register.png" />
+    <Resource Include="resources\TMF Logo3.png" />
+    <Resource Include="resources\TMF Logo4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,7 +19,7 @@
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text=" "/><Run Text="Login:"/></TextBlock>
             <TextBox Name="txtName" Padding="2" Margin="353,255,277,-238"
-                     FontSize="35" TextChanged="TxtName_TextChanged" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"/>
+                     FontSize="35" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"/>
             <TextBlock FontSize="40" Margin="154,352,828,-335" Foreground="White" FontFamily="Tw Cen MT">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
