@@ -58,6 +58,11 @@ namespace WpfApp1
                 MessageBox.Show("Incorrect Login or Password");
 
             }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
    
 }

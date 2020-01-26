@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
+        WindowStyle="None"
         mc:Ignorable="d"
         Title="Teammate Finder - Register" Height="800" Width="1200">
     <Border Padding="15">
@@ -57,7 +58,7 @@
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text="   "/><Run Text="Confirm Password:"/></TextBlock>
             <PasswordBox Name="txtConfirmPassword" Padding="2" Margin="353,444,277,-427" FontSize="35" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"></PasswordBox>
-            <Image HorizontalAlignment="Left" Height="188" Margin="18,21,0,-138" VerticalAlignment="Top" Width="545" RenderTransformOrigin="-0.403,-0.257" Source="pack://siteoforigin:,,,/resources/register.png">
+            <Image HorizontalAlignment="Left" Height="154" Margin="18,21,0,-104" VerticalAlignment="Top" Width="495" RenderTransformOrigin="-0.403,-0.257" Source="pack://siteoforigin:,,,/resources/register.png">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
@@ -73,7 +74,7 @@
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/register.png"/>
                 </Image.OpacityMask>
             </Image>
-            <Image HorizontalAlignment="Left" Height="196" Margin="832,0,0,-125" VerticalAlignment="Top" Width="342" Source="pack://siteoforigin:,,,/resources/TMF Logo4.png">
+            <Image HorizontalAlignment="Left" Height="196" Margin="787,0,0,-125" VerticalAlignment="Top" Width="342" Source="pack://siteoforigin:,,,/resources/TMF Logo4.png">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
@@ -84,6 +85,33 @@
                 </Button.Effect>
                 <Button.Background>
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button HorizontalAlignment="Left" Margin="1105,0,0,0" VerticalAlignment="Top" Width="69" Height="67" Click="Button_Click_2">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/cross.png"/>
                 </Button.Background>
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">

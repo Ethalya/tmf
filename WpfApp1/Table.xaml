@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
         Title="Teammate Finder - Find!" Height="800" Width="1200" Closed="Window_Closed" Loaded="Window_Loaded" >
     <Border Padding="15">
         <Grid Margin="-15">
@@ -55,7 +56,7 @@
             </DataGrid>
             <ComboBox x:Name="Roles" HorizontalAlignment="Left" ItemsSource="{Binding Role}" VerticalAlignment="Top" Width="236" Margin="369,65,0,0" Height="56" FontFamily="Tw Cen MT" Foreground="Black" FontSize="35"/>
             <ComboBox x:Name="Rank" HorizontalAlignment="Left" ItemsSource="{Binding Rank}" VerticalAlignment="Top" Width="246" Margin="658,65,0,0" Height="56" FontFamily="Tw Cen MT" Foreground="Black" FontSize="30"/>
-            <Button  Content="Search" FontSize="35" HorizontalAlignment="Left" Margin="918,49,0,635"  Width="244" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.547,0.845">
+            <Button  Content="Search" FontSize="35" HorizontalAlignment="Left" Margin="909,47,0,664"  Width="227" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.547,0.845">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
@@ -143,7 +144,33 @@
                     </Style>
                 </Button.Style>
             </Button>
-
+            <Button HorizontalAlignment="Left" Margin="1121,11,0,722" Width="69" Click="Button_Click_1">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/cross.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
         </Grid>
     </Border>
 </Window>

@@ -58,5 +58,10 @@ namespace WpfApp1
             string st = File.ReadAllText(path);
             Import.Text = st;
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

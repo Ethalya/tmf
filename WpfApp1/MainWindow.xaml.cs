@@ -37,5 +37,10 @@ namespace WpfApp1
             win.Show();
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
