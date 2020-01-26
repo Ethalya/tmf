@@ -133,6 +133,16 @@ namespace WpfApp1.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nami {
+            get {
+                object obj = ResourceManager.GetObject("nami", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Panel {
             get {
                 object obj = ResourceManager.GetObject("Panel", resourceCulture);
