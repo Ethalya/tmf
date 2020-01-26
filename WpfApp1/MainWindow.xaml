@@ -7,7 +7,7 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="800" Width="1200" >
+        Title="Teammate Finder - Hello!" Height="800" Width="1200" >
     <Border Padding="15">
 
         <Grid Margin="-15">

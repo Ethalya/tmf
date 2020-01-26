@@ -5,18 +5,113 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Bonus" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Teammate Finder - CSV" Height="800" Width="1200">
     <Grid>
-        <TextBox Name="txtID" HorizontalAlignment="Left" Height="23" Margin="179,152,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txtNick" HorizontalAlignment="Left" Height="23" Margin="179,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txtServer" HorizontalAlignment="Left" Height="23" Margin="179,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Export" HorizontalAlignment="Left" Margin="192,311,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="144,159,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top" RenderTransformOrigin="2.807,0.281"/>
-        <TextBlock HorizontalAlignment="Left" Margin="103,208,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" RenderTransformOrigin="-1.351,-0.063"/>
-        <TextBlock HorizontalAlignment="Left" Margin="123,254,0,0" TextWrapping="Wrap" Text="Server:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="335,64,0,0" TextWrapping="Wrap" Text="Import i Export CSV" VerticalAlignment="Top"/>
-        <Button Content="Import" HorizontalAlignment="Left" Margin="534,311,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <TextBox Name="Import" HorizontalAlignment="Left" Height="79" Margin="506,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/nami.jpg"/>
+        </Grid.Background>
+        <TextBox Name="txtID" HorizontalAlignment="Left" Height="44" Margin="277,253,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="217" RenderTransformOrigin="0.168,0.716" FontFamily="Tw Cen MT" Background="{x:Null}" Foreground="White" FontSize="35">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="txtNick" HorizontalAlignment="Left" Height="44" Margin="277,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" FontFamily="Tw Cen MT" Background="{x:Null}" Foreground="White" FontSize="35">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="txtServer" HorizontalAlignment="Left" Height="44" Margin="277,416,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" FontFamily="Tw Cen MT" Background="{x:Null}" Foreground="White" FontSize="35">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button Content="Export" HorizontalAlignment="Left" Margin="277,499,0,0" VerticalAlignment="Top" Width="217" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White" FontSize="35" Height="66">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="210,253,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top" RenderTransformOrigin="2.807,0.281" FontFamily="Tw Cen MT" Foreground="White" FontSize="40">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="88,330,0,0" TextWrapping="Wrap" Text="Nickname:" VerticalAlignment="Top" RenderTransformOrigin="-1.351,-0.063" FontFamily="Tw Cen MT" Foreground="White" FontSize="40">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="139,416,0,0" TextWrapping="Wrap" Text="Server:" VerticalAlignment="Top" FontFamily="Tw Cen MT" Foreground="White" FontSize="40" RenderTransformOrigin="0.509,0.953">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="50,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Tw Cen MT" FontSize="60" Foreground="White" Height="76" Width="525">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect><Run Text="Import "/><Run Text="&amp; "/><Run Text="Export CSV"/></TextBlock>
+        <Button Content="Import" HorizontalAlignment="Left" Margin="818,499,0,0" VerticalAlignment="Top" Width="192" Click="Button_Click_1" FontFamily="Tw Cen MT" Foreground="White" FontSize="35" Height="66">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBox Name="Import" HorizontalAlignment="Left" Height="207" Margin="780,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontFamily="Tw Cen MT" Background="{x:Null}" Foreground="White" FontSize="35">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" Margin="818,189,0,0" TextWrapping="Wrap" Text="Import result:" VerticalAlignment="Top" FontFamily="Tw Cen MT" Foreground="White" FontSize="40">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
 
     </Grid>
 </Window>

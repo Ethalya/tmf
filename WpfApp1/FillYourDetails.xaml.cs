@@ -128,22 +128,6 @@ namespace WpfApp1
             sqlCon.Close();
         }
 
-  
-
-
-
-
-       
-
-        private void Contact_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Char1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            FillComboFromCharacters();
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -158,12 +142,7 @@ namespace WpfApp1
         }
         private void Char1_TextInput(object sender, TextCompositionEventArgs e)
         {
-           
-        }
-
-        private void Char1_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
+            FillComboFromCharacters();
         }
 
         private void Server_TextInput(object sender, TextCompositionEventArgs e)
@@ -172,8 +151,7 @@ namespace WpfApp1
             
         }
 
-   
-
+  
         private void Role_TextInput_1(object sender, TextCompositionEventArgs e)
         {
             FillComboFromRole();

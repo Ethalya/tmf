@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Table" Height="800" Width="1200" Closed="Window_Closed" Loaded="Window_Loaded" >
+        WindowStartupLocation="CenterScreen"
+        Title="Teammate Finder - Find!" Height="800" Width="1200" Closed="Window_Closed" Loaded="Window_Loaded" >
     <Border Padding="15">
         <Grid Margin="-15">
             <Grid.Background>
@@ -55,6 +56,9 @@
             <ComboBox x:Name="Roles" HorizontalAlignment="Left" ItemsSource="{Binding Role}" VerticalAlignment="Top" Width="236" Margin="369,65,0,0" Height="56" FontFamily="Tw Cen MT" Foreground="Black" FontSize="35"/>
             <ComboBox x:Name="Rank" HorizontalAlignment="Left" ItemsSource="{Binding Rank}" VerticalAlignment="Top" Width="246" Margin="658,65,0,0" Height="56" FontFamily="Tw Cen MT" Foreground="Black" FontSize="30"/>
             <Button  Content="Search" FontSize="35" HorizontalAlignment="Left" Margin="918,49,0,635"  Width="244" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.547,0.845">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
                 <Button.Background>
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
                 </Button.Background>
@@ -80,6 +84,9 @@
             </Button>
             <Image HorizontalAlignment="Left" Height="117" Margin="10,644,0,0" VerticalAlignment="Top" Width="229" Source="pack://siteoforigin:,,,/resources/TMF Logo4.png"/>
             <Button Content="Show All" HorizontalAlignment="Left" Margin="896,670,0,0" VerticalAlignment="Top" Width="288" Height="91" Foreground="White" FontSize="35" FontFamily="Tw Cen MT" Click="Button_Click_2">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
                 <Button.Background>
                     <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
                 </Button.Background>
@@ -108,6 +115,34 @@
             <Image HorizontalAlignment="Left" Height="78" Margin="88,0,0,0" VerticalAlignment="Top" Width="204" Source="pack://siteoforigin:,,,/resources/server.png"/>
             <Image HorizontalAlignment="Left" Height="78" Margin="386,0,0,0" VerticalAlignment="Top" Width="204" Source="pack://siteoforigin:,,,/resources/role.png"/>
             <Image HorizontalAlignment="Left" Height="78" Margin="685,0,0,0" VerticalAlignment="Top" Width="204" Source="pack://siteoforigin:,,,/resources/division.png"/>
+            <Button Content="BonusCSV" HorizontalAlignment="Left" Margin="717,693,0,0" VerticalAlignment="Top" Width="153" Height="54" Click="Button_Click_3" FontFamily="Tw Cen MT" FontSize="20" Foreground="White">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/button2.png"/>
+                </Button.Background>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
 
         </Grid>
     </Border>

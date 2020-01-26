@@ -7,7 +7,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         mc:Ignorable="d"
-        Title="FillYourDetails" Height="800" Width="1200" Closing="Window_Closing"  >
+        Title="Teammate Finder - Your Panel" Height="800" Width="1200" Closing="Window_Closing" >
     <Border Padding="15">
         <Grid Margin="-15">
             <Grid.Background>
@@ -34,12 +34,12 @@
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect></TextBlock>
-            <TextBox Name="Contact" FontSize="40" Margin="293,405,637,307" TextChanged="Contact_TextChanged" Loaded="Contact_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" ClipToBounds="True" Width="264" Height="59" VerticalAlignment="Stretch"></TextBox>
-            <TextBlock FontSize="40" Margin="24,544,920,179" FontFamily="Tw Cen MT" Foreground="White">
+            <TextBox Name="Contact" FontSize="40" Margin="293,405,637,307" Loaded="Contact_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" ClipToBounds="True" Width="264" Height="59" VerticalAlignment="Stretch"></TextBox>
+            <TextBlock FontSize="40" Margin="10,544,934,179" FontFamily="Tw Cen MT" Foreground="White">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text="Main"/><Run Text=" character:"/></TextBlock>
-            <ComboBox Name="Char1" FontSize="40" Margin="293,533,637,179" TextInput="Char1_TextInput" IsTextSearchEnabled="True" SelectionChanged="Char1_SelectionChanged_1" Loaded="Char1_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center"/>
+            <ComboBox Name="Char1" FontSize="40" Margin="293,533,637,179" IsTextSearchEnabled="True" Loaded="Char1_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center"/>
 
             <Button x:Name="ConfirmButton" Content="Save" FontSize="40" Margin="293,630,650,65" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White">
                 <Button.Effect>

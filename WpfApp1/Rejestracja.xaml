@@ -7,7 +7,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         mc:Ignorable="d"
-        Title="Rejestracja" Height="800" Width="1200">
+        Title="Teammate Finder - Register" Height="800" Width="1200">
     <Border Padding="15">
         <Border.Background>
             <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/jhin.jpg"/>
