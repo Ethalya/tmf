@@ -14,12 +14,12 @@
             <Grid.Background>
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/resources/ashe.jpg"/>
             </Grid.Background>
-            <TextBox Name="txtLogin" FontSize="35" Margin="233,474,633,268" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"></TextBox>
+            <TextBox Name="txtLogin" FontSize="35" Margin="233,474,633,277" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"></TextBox>
             <TextBlock Text="Password:" FontSize="40" Margin="47,546,967,196" Foreground="White" FontFamily="Tw Cen MT">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect></TextBlock>
-            <PasswordBox Name="txtPassword" FontSize="35" Margin="233,537,633,205" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"></PasswordBox>
+            <PasswordBox Name="txtPassword" FontSize="35" Margin="233,546,633,205" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"></PasswordBox>
             <Button Content="Sign in" FontSize="40" Margin="233,614,633,60" Click="Button_Click_1" Foreground="White" FontFamily="Tw Cen MT">
                 <Button.Effect>
                     <DropShadowEffect/>

@@ -18,7 +18,7 @@
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect></TextBlock>
-            <TextBox Name="Nickname" Margin="293,137,637,599" FontSize="40" Loaded="Nickname_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <TextBox Name="Nickname" Margin="293,148,637,602" FontSize="40" Loaded="Nickname_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
             <TextBlock Text="Server:" FontSize="40" Margin="151,215,920,506" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.427,0.4">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
@@ -31,16 +31,16 @@
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect></TextBlock>
-            <TextBlock Text="Discord id:" FontSize="40" Margin="100,416,920,307" FontFamily="Tw Cen MT" Foreground="White">
+            <TextBlock Text="Discord id:" FontSize="40" Margin="100,410,920,313" FontFamily="Tw Cen MT" Foreground="White">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect></TextBlock>
-            <TextBox Name="Contact" FontSize="40" Margin="293,410,637,331" Loaded="Contact_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" ClipToBounds="True" Height="59" VerticalAlignment="Stretch"/>
+            <TextBox Name="Contact" FontSize="40" Margin="293,410,637,340" Loaded="Contact_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="White" ClipToBounds="True" VerticalAlignment="Stretch"/>
             <TextBlock FontSize="40" Margin="10,544,934,179" FontFamily="Tw Cen MT" Foreground="White">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text="Main"/><Run Text=" character:"/></TextBlock>
-            <ComboBox Name="Char1" FontSize="40" Margin="293,544,637,200" IsTextSearchEnabled="True" Loaded="Char1_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center"/>
+            <ComboBox Name="Char1" FontSize="40" Margin="293,544,637,206" IsTextSearchEnabled="True" Loaded="Char1_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center"/>
 
             <Button x:Name="ConfirmButton" Content="Save" FontSize="40" Margin="293,630,650,65" Click="Button_Click" FontFamily="Tw Cen MT" Foreground="White">
                 <Button.Effect>
@@ -69,9 +69,9 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <ComboBox x:Name="Server" Margin="293,206,637,528" FontSize="40" ItemsSource="{Binding dr,Mode=OneWay}" TextInput="Server_TextInput" Loaded="Server_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" Block.TextAlignment="Center"/>
-            <ComboBox x:Name="Division" Margin="293,277,637,464" FontSize="40" TextInput="Division_TextInput_1" Loaded="Division_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center" />
-            <ComboBox x:Name="Role" Margin="293,341,637,398" FontSize="40" TextInput="Role_TextInput_1" Loaded="Role_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center"/>
+            <ComboBox x:Name="Server" Margin="293,215,637,535" FontSize="40" ItemsSource="{Binding dr,Mode=OneWay}" TextInput="Server_TextInput" Loaded="Server_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Block.TextAlignment="Center" Background="Black"/>
+            <ComboBox x:Name="Division" Margin="293,283,637,467" FontSize="40" TextInput="Division_TextInput_1" Loaded="Division_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center" />
+            <ComboBox x:Name="Role" Margin="293,346,637,404" FontSize="40" TextInput="Role_TextInput_1" Loaded="Role_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center"/>
             <Button x:Name="FindButton" Content="Find a teammate!" Margin="716,614,24,23" Click="Button_Click_1" FontSize="40" FontFamily="Tw Cen MT" Foreground="White"  >
                 <Button.Effect>
                     <DropShadowEffect/>
@@ -99,7 +99,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <TextBlock Margin="130,480,925,241" Text="Gender:" FontSize="40" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.5,0.5" >
+            <TextBlock Margin="129,478,926,243" Text="Gender:" FontSize="40" FontFamily="Tw Cen MT" Foreground="White" RenderTransformOrigin="0.5,0.5" >
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect>
@@ -111,7 +111,7 @@
                         <TranslateTransform Y="0.742"/>
                     </TransformGroup>
                 </TextBlock.RenderTransform></TextBlock>
-            <ComboBox x:Name="Gender" Margin="293,474,637,267" TextInput="Gender_TextInput" FontSize="40" Loaded="Gender_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center" />
+            <ComboBox x:Name="Gender" Margin="293,480,637,270" TextInput="Gender_TextInput" FontSize="40" Loaded="Gender_Loaded" FontFamily="Tw Cen MT" Foreground="Black" Background="{x:Null}" ClipToBounds="True" Block.TextAlignment="Center" />
             <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="393" Margin="151,10,0,0" Source="pack://siteoforigin:,,,/resources/Panel.png">
                 <Image.Effect>
                     <DropShadowEffect/>

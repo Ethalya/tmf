@@ -15,13 +15,13 @@
         </Border.Background>
 
         <Grid Margin="-5,-5,-5,0" Height="71" VerticalAlignment="Top">
-            <TextBlock FontSize="40" Margin="220,255,826,-238" Foreground="White" FontFamily="Tw Cen MT">
+            <TextBlock FontSize="40" Margin="219,261,827,-244" Foreground="White" FontFamily="Tw Cen MT">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text=" "/><Run Text="Login:"/></TextBlock>
             <TextBox Name="txtName" Padding="2" Margin="353,255,277,-238"
                      FontSize="35" Background="{x:Null}" Foreground="White" FontFamily="Tw Cen MT"/>
-            <TextBlock FontSize="40" Margin="154,352,828,-335" Foreground="White" FontFamily="Tw Cen MT">
+            <TextBlock FontSize="40" Margin="155,358,827,-341" Foreground="White" FontFamily="Tw Cen MT">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text=" "/><Run Text="Password:"/></TextBlock>
@@ -53,7 +53,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <TextBlock FontSize="40" Margin="-1,444,841,-427" Foreground="White" FontFamily="Tw Cen MT">
+            <TextBlock FontSize="40" Margin="-1,450,841,-433" Foreground="White" FontFamily="Tw Cen MT">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text="   "/><Run Text="Confirm Password:"/></TextBlock>
