@@ -75,6 +75,11 @@ namespace WpfApp1
             GridLoad();
         }
 
-        
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Bonus win = new Bonus();
+            win.Show();
+            this.Close();
+        }
     }
 }
